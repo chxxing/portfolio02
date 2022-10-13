@@ -12,7 +12,7 @@ const Cover = ({ on, setOn }) => {
         e.stopPropagation();
     };
     useEffect(() => {
-        window.addEventListener('wheel', wheelStop);
+        cover.current.addEventListener('wheel', wheelStop);
         return () => {
             cover.current.removeEventListener('wheel', wheelStop);
         }
